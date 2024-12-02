@@ -1,4 +1,5 @@
-import { FETCH_BUTTON_CLICKED } from "./types";
+//import { type } from "@testing-library/user-event/dist/type";
+import { FETCH_BUTTON_CLICKED, SELECT_POST } from "./types";
 
 export const fetchPosts = () => {
   return {
@@ -35,5 +36,12 @@ export const fetchPosts = () => {
         body: "A dystopian novel set in a totalitarian society where the government controls every aspect of life. The protagonist, Winston Smith, rebels against the oppressive regime and questions the nature of truth and reality.",
       },
     ],
+  };
+};
+
+export const selectPost = (post) => {
+  return {
+    type: SELECT_POST,
+    payload: post,
   };
 };

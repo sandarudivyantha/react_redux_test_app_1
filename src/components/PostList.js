@@ -1,17 +1,23 @@
 import React from "react";
 import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { selectPost } from "../actions/postAction";
 
 function mapStateToProps(state) {
   return {
-    AllPosts: state.allPosts, 
+    AllPosts: state.allPosts,
   };
+}
+
+function matchDispatchToProps(dispatch) {
+  return bindActionCreators({ selectPost: selectPost }, dispatch);
 }
 
 const PostList = (props) => {
   const createListItems = () => {
     return props.AllPosts.map((post) => {
       return (
-        <li key={post.id}>
+        <li key={post.id} onClick={() => props.selectPost(post)}>
           {post.title} {post.body}
         </li>
       );
@@ -29,4 +35,4 @@ const PostList = (props) => {
   );
 };
 
-export default connect(mapStateToProps)(PostList);
+export default connect(mapStateToProps, matchDispatchToProps)(PostList);
