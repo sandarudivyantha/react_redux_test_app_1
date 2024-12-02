@@ -1,11 +1,11 @@
-import './App.css';
-import ButtonComponents from './components/ButtonComponents';
+import "./App.css";
+import ButtonComponents from "./components/ButtonComponents";
 
 function App() {
   return (
     <div className="App">
       <h1>wds</h1>
-      <ButtonComponents/>
+      <ButtonComponents />
     </div>
   );
 }
