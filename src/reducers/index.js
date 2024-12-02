@@ -3,9 +3,11 @@
 import { combineReducers } from "redux";
 
 import AllPostsReducer from "./allPostsReducer";
+import SelectedPostReducer from "./selectedPostReducer";
 
 const rootReducer = combineReducers({
   allPosts: AllPostsReducer,
+  selectedPost: SelectedPostReducer,
 });
 
 export default rootReducer;
