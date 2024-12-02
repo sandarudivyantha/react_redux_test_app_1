@@ -2,7 +2,7 @@
 
 import { combineReducers } from "redux";
 
-import { AllPostsReducer } from "./allPostsReducer";
+import AllPostsReducer from "./allPostsReducer";
 
 const rootReducer = combineReducers({
   allPosts: AllPostsReducer,
