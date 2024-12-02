@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { Component } from "react";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import { fetchPosts } from "../actions/postAction";
 
-const ButtonComponents = () => {
-  return (
-    <div>
-        <button>Click Me</button>
-    </div>
-  )
+class ButtonComponents extends Component {
+  render() {
+    return (
+      <div>
+        <button onClick={() => this.props.fetchPosts()}>Click Me</button>
+      </div>
+    );
+  }
 }
 
-export default ButtonComponents
+function matchDispatchToProps(dispatch) {
+  return bindActionCreators({ fetchPosts: fetchPosts }, dispatch);
+}
+
+export default connect(null, matchDispatchToProps)(ButtonComponents);
