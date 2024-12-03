@@ -6,7 +6,7 @@ import SelectedPost from "./components/SelectedPost";
 function App() {
   return (
     <div className="App">
-      <h1>wds</h1>
+      <h1>Book Store</h1>
       <ButtonComponents />
       <br />
       <PostList />
