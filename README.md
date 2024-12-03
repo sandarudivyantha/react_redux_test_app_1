@@ -44,16 +44,17 @@ This project uses Redux to centralize the state management, making the app more 
 ## Screenshots
 
 ### Main Page
-![Main Page](![1](https://github.com/user-attachments/assets/759fb8c7-c1cd-4ec0-9095-c72d53c921d9))
+![1](https://github.com/user-attachments/assets/abc4e79b-1f03-45a7-9fe1-a3bea5be682c)
 
 ### All Books Details Display
-![Book Details](![2](https://github.com/user-attachments/assets/a54999c4-19de-4f03-8e9c-98ea43b1c03f))
+![2](https://github.com/user-attachments/assets/ca8a1944-07fa-4071-baa6-4ce42e99a4d8)
 
 ### Book Details Display
-![Book Details](![4](https://github.com/user-attachments/assets/0c5572ea-a039-480c-bcab-369bd3db5a54))
+![4](https://github.com/user-attachments/assets/832524ae-9ee0-4f68-9991-bd46a263bfed)
 
 ### Redux DevTools
-![Redux DevTools](![5](https://github.com/user-attachments/assets/74b49aef-0f21-45ba-aab5-72afc686afc0))
+![5](https://github.com/user-attachments/assets/6f5fecef-0ba2-4d3f-8ba1-4f60230ec275)
+
 
 ## Getting Started
 
