@@ -2,10 +2,12 @@ import React from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { selectPost } from "../actions/postAction";
+import './PostList.css'; // Import the CSS file for styling
 
 function mapStateToProps(state) {
   return {
     AllPosts: state.allPosts,
+    selectedPost: state.selectedPost,  // To show the selected post on the right side
   };
 }
 
@@ -14,12 +16,27 @@ function matchDispatchToProps(dispatch) {
 }
 
 const PostList = (props) => {
-  const createListItems = () => {
+  const createCardItems = () => {
     return props.AllPosts.map((post) => {
+      const isSelected = props.selectedPost && props.selectedPost.id === post.id;
+
       return (
-        <li key={post.id} onClick={() => props.selectPost(post)}>
-          {post.title} {post.body}
-        </li>
+        <div
+          key={post.id}
+          className={`card ${isSelected ? 'selected' : ''}`} // No highlight needed now
+          onClick={() => props.selectPost(post)}
+        >
+          <div className="card-content">
+            <h4>Book ID: {post.id}</h4>
+            <h3>{post.title}</h3>
+            <img
+              src={post.imageUrl}
+              alt={post.title}
+              className="card-image"
+            />
+            <p>{post.body}</p>
+          </div>
+        </div>
       );
     });
   };
@@ -29,8 +46,8 @@ const PostList = (props) => {
   }
 
   return (
-    <div>
-      <ul>{createListItems()}</ul>
+    <div className={`card-container ${props.selectedPost ? 'minimized' : ''}`}>
+      {createCardItems()}
     </div>
   );
 };
