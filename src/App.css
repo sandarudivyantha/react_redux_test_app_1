@@ -62,6 +62,31 @@
   color: #61dafb;
 }
 
+/* Styling for the 'Click Me' button */
+button {
+  background-color: #add8e6; /* Light blue background */
+  border: none; /* No border */
+  color: black; /* White text color */
+  padding: 20px 40px; /* Larger padding for a bigger button */
+  text-align: center; /* Center align the text */
+  text-decoration: none; /* Remove text underline */
+  display: inline-block; /* Align inline */
+  font-size: 18px; /* Bigger font size */
+  font-weight: bold;
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 20px; /* Fully rounded corners */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
+}
+
+button:hover {
+  background-color: #87cefa; /* Darker light blue when hovered */
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+button:focus {
+  outline: none; /* Remove the default focus outline */
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
