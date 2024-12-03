@@ -2,12 +2,12 @@ import React from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { selectPost } from "../actions/postAction";
-import './PostList.css'; // Import the CSS file for styling
+import './PostList.css'; 
 
 function mapStateToProps(state) {
   return {
     AllPosts: state.allPosts,
-    selectedPost: state.selectedPost,  // To show the selected post on the right side
+    selectedPost: state.selectedPost,  
   };
 }
 
@@ -23,7 +23,7 @@ const PostList = (props) => {
       return (
         <div
           key={post.id}
-          className={`card ${isSelected ? 'selected' : ''}`} // No highlight needed now
+          className={`card ${isSelected ? 'selected' : ''}`} 
           onClick={() => props.selectPost(post)}
         >
           <div className="card-content">

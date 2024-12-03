@@ -9,7 +9,7 @@
   
   /* Minimize the card container after a post is selected */
   .card-container.minimized {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row when a post is selected */
+    grid-template-columns: repeat(3, 1fr); /* 2 cards per row when a post is selected */
     opacity: 0.7;  /* Slightly reduce opacity to emphasize the selected post */
   }
   
